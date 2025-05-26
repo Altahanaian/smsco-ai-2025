@@ -1,12 +1,18 @@
-// app/page.tsx
+'use client';
 import React from 'react';
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-indigo-100 via-white to-indigo-200 flex items-center justify-center p-6">
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md text-center">
-        <h1 className="text-3xl font-extrabold text-gray-800 mb-4">🌐 SMSCO AI Platform</h1>
+        <img
+          src="/logo-smsco.png"
+          alt="SMSCO Logo"
+          className="mx-auto mb-4 w-24 h-auto"
+        />
+        <h1 className="text-3xl font-extrabold text-gray-800 mb-4">SMSCO AI Platform</h1>
         <p className="text-gray-600 mb-6">Please select your preferred language</p>
+
         <div className="flex justify-center space-x-4 rtl:space-x-reverse">
           <a
             href="/ar"

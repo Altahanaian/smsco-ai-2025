@@ -1,17 +1,28 @@
-import './globals.css';
-import React from 'react';
+import './globals.css'
+import React from 'react'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" dir="ltr">
-      <body className="bg-gray-50 text-gray-900 font-sans p-4">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <header className="text-center border-b pb-4">
-            <h1 className="text-3xl font-bold">SMSCO AI Platform</h1>
-            <p className="text-sm text-gray-600">Choose your language</p>
-          </header>
-          <main>{children}</main>
-        </div>
+      <body className="relative min-h-screen bg-gray-50 text-gray-900 font-sans">
+        {/* الخلفية */}
+        <img
+          src="/background-smsco-lavender.png"
+          alt="Background"
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10 opacity-40"
+        />
+
+        {/* الشعار في الأعلى */}
+        <header className="w-full py-4 flex justify-center items-center">
+          <img
+            src="/logo-smsco-transparent.png"
+            alt="SMSCO Logo"
+            className="h-16 w-auto"
+          />
+        </header>
+
+        {/* المحتوى */}
+        <main className="px-6 pb-12">{children}</main>
       </body>
     </html>
   );
