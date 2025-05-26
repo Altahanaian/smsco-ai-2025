@@ -1,16 +1,11 @@
+import '../globals.css';
 import React from 'react';
-import { Analytics } from '@vercel/analytics/react';
 
-export default function LocaleLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ar">
-      <body>
+    <html lang="ar" dir="rtl">
+      <body className="bg-gray-50 text-gray-900 font-sans p-4">
         {children}
-        <Analytics />
       </body>
     </html>
   );
