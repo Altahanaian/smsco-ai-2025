@@ -1,5 +1,5 @@
-// app/ar/layout.tsx أو app/en/layout.tsx
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function LocaleLayout({
   children,
@@ -8,7 +8,10 @@ export default function LocaleLayout({
 }) {
   return (
     <html lang="ar">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
